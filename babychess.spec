@@ -40,10 +40,13 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/%{_desktopdir}
-mv "$RPM_BUILD_ROOT%{_applnkdir}/Games/BabyChess Server.desktop" $RPM_BUILD_ROOT/%{_desktopdir}
-mv "$RPM_BUILD_ROOT%{_applnkdir}/Games/BabyChess Game Archive.desktop" $RPM_BUILD_ROOT/%{_desktopdir}
-mv "$RPM_BUILD_ROOT%{_applnkdir}/Games/BabyChess Game.desktop" $RPM_BUILD_ROOT/%{_desktopdir}
-
+#mv -f "$RPM_BUILD_ROOT%{_datadir}/gnome/apps/Games/*.desktop" $RPM_BUILD_ROOT/%{_desktopdir}
+#mv "$RPM_BUILD_ROOT%{_datadir}/gnome/apps/Games/BabyChess Game Archive.desktop" $RPM_BUILD_ROOT/%{_desktopdir}
+#mv "$RPM_BUILD_ROOT%{_datadir}/gnome/apps/Games/BabyChess Game.desktop" $RPM_BUILD_ROOT/%{_desktopdir}
+for i in "$RPM_BUILD_ROOT%{_datadir}/gnome/apps/Games/*"
+do
+	mv -f $i $RPM_BUILD_ROOT/%{_desktopdir}/
+done
 %clean
 rm -rf $RPM_BUILD_ROOT
 
