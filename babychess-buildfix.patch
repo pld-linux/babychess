@@ -1,0 +1,16 @@
+diff -Nuard babychess-14.1.orig/src/evaluator_widget.cc babychess-14.1/src/evaluator_widget.cc
+--- babychess-14.1.orig/src/evaluator_widget.cc	2003-03-16 14:10:55.000000000 +0100
++++ babychess-14.1/src/evaluator_widget.cc	2003-10-09 23:52:26.000000000 +0200
+@@ -169,10 +169,12 @@
+ {
+ 	Dbg_Function();
+ 
++/*
+ 	if (IO_Child_Process::Is())
+ 		Terminate();
+ 	if (Timer::Is())
+ 		Timer::Stop();
++*/
+  	Evaluator::Close();
+ 	settings_editor.Close();
+ 

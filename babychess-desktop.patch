@@ -1,0 +1,59 @@
+diff -Nuard babychess-14.1.orig/sh/install babychess-14.1/sh/install
+--- babychess-14.1.orig/sh/install	2003-03-16 14:10:54.000000000 +0100
++++ babychess-14.1/sh/install	2003-10-09 23:32:09.000000000 +0200
+@@ -111,8 +111,9 @@
+ 		echo "Name=$prog_name"
+ 		echo "Comment=`grep '/\* *Comment: *[^\*]*\*/' < src/$program.cc | $sed 's/\/\* *Comment: *\([^\*]*\) *\*\//\1/'`"
+ 		echo "Exec=$install_dir/bin/baby_$program"
+-		echo "Terminal=0"
++		echo "Terminal=false"
+ 		echo "Type=Application"
++		echo "Categories=Application;Game;BoardGame;"
+ 		icon_name=`grep '/\* *Icon: *[^\*]*\*/' < src/$program.cc | \
+                           $sed 's/\/\* *Icon: *\([^\* ]*\) *\*\//\1/'`
+ 		if [ -z "$icon" ] ; then icon=baby ; fi
+diff -Nuard babychess-14.1.orig/src/gui_about.cc babychess-14.1/src/gui_about.cc
+--- babychess-14.1.orig/src/gui_about.cc	2003-03-16 14:10:58.000000000 +0100
++++ babychess-14.1/src/gui_about.cc	2003-10-09 23:46:29.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Name:     About Baby               */
++/* Name:     About BabyChess               */
+ /* Comment:  Info about Baby programs */
+ /* Icon:     chess                    */
+ 
+diff -Nuard babychess-14.1.orig/src/gui_game_archive.cc babychess-14.1/src/gui_game_archive.cc
+--- babychess-14.1.orig/src/gui_game_archive.cc	2003-03-16 14:10:54.000000000 +0100
++++ babychess-14.1/src/gui_game_archive.cc	2003-10-09 23:46:03.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Name:     New Chess Game Archive   */
++/* Name:     BabyChess Game Archive   */
+ /* Comment:  Edit chess game archives */
+ /* Icon:     chess                    */
+ /* MimeType:   application/x-pgn      */
+diff -Nuard babychess-14.1.orig/src/gui_game.cc babychess-14.1/src/gui_game.cc
+--- babychess-14.1.orig/src/gui_game.cc	2003-03-16 14:10:54.000000000 +0100
++++ babychess-14.1/src/gui_game.cc	2003-10-09 23:46:17.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Name:       New Chess Game      */
++/* Name:       BabyChess Game      */
+ /* Comment:    Edit chess games    */
+ /* Icon:       chess               */
+ 
+diff -Nuard babychess-14.1.orig/src/gui_ics.cc babychess-14.1/src/gui_ics.cc
+--- babychess-14.1.orig/src/gui_ics.cc	2003-03-16 14:10:54.000000000 +0100
++++ babychess-14.1/src/gui_ics.cc	2003-10-09 23:46:40.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Name:     Internet Chess Server   */
++/* Name:     BabyChess Server   */
+ /* Comment:  Play chess over the net */
+ /* Icon:     ics                     */
+ 
+diff -Nuard babychess-14.1.orig/src/gui_position.cc babychess-14.1/src/gui_position.cc
+--- babychess-14.1.orig/src/gui_position.cc	2003-03-16 14:10:54.000000000 +0100
++++ babychess-14.1/src/gui_position.cc	2003-10-09 23:45:55.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Name:        New Chess Position   */
++/* Name:        BabyChess Position   */
+ /* Comment:     Edit chess positions */
+ /* MimeType:    application/x-fen    */
+ /* Icon:        chess                */
