@@ -1,4 +1,3 @@
-# TODO: optflags
 Summary:	BabyChess - a chess program
 Summary(pl):	BabyChess - program do gry w szachy
 Name:		babychess
@@ -14,6 +13,8 @@ Patch0:		%{name}-buildfix.patch
 Patch1:		%{name}-destdir.patch
 Patch2:		%{name}-desktop.patch
 BuildRequires:	gtk+-devel
+BuildRequires:	libpng-devel
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +32,10 @@ gry, gra poprzez internet, oraz gra z komputerem.
 %patch2 -p1
 
 %build
-%{__make}
+%{__make} \
+	gcc="%{__cxx}" \
+	CXXFLAGS="%{rpmcflags} -D_GNU_SOURCE -DNDEBUG -fno-implicit-inline-templates -fno-rtti -fno-inline-functions `gtk-config --cflags`" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
