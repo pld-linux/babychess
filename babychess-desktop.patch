@@ -8,7 +8,7 @@ diff -Nuard babychess-14.1.orig/sh/install babychess-14.1/sh/install
 -		echo "Terminal=0"
 +		echo "Terminal=false"
  		echo "Type=Application"
-+		echo "Categories=Application;Game;BoardGame;"
++		echo "Categories=GTK;Game;BoardGame;"
  		icon_name=`grep '/\* *Icon: *[^\*]*\*/' < src/$program.cc | \
                            $sed 's/\/\* *Icon: *\([^\* ]*\) *\*\//\1/'`
  		if [ -z "$icon" ] ; then icon=baby ; fi
