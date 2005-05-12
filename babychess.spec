@@ -2,7 +2,7 @@ Summary:	BabyChess - a chess program
 Summary(pl):	BabyChess - program do gry w szachy
 Name:		babychess
 Version:	14.1
-Release:	3
+Release:	4
 Epoch:		0
 License:	GPL
 Group:		X11/Applications/Games
