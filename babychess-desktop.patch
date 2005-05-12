@@ -1,6 +1,6 @@
 diff -Nuard babychess-14.1.orig/sh/install babychess-14.1/sh/install
 --- babychess-14.1.orig/sh/install	2003-03-16 14:10:54.000000000 +0100
-+++ babychess-14.1/sh/install	2003-10-09 23:32:09.000000000 +0200
++++ babychess-14.1/sh/install	2005-05-13 00:42:00.000000000 +0200
 @@ -111,8 +111,9 @@
  		echo "Name=$prog_name"
  		echo "Comment=`grep '/\* *Comment: *[^\*]*\*/' < src/$program.cc | $sed 's/\/\* *Comment: *\([^\*]*\) *\*\//\1/'`"
@@ -12,6 +12,15 @@ diff -Nuard babychess-14.1.orig/sh/install babychess-14.1/sh/install
  		icon_name=`grep '/\* *Icon: *[^\*]*\*/' < src/$program.cc | \
                            $sed 's/\/\* *Icon: *\([^\* ]*\) *\*\//\1/'`
  		if [ -z "$icon" ] ; then icon=baby ; fi
+@@ -123,7 +124,7 @@
+ 		mimetype=$mimetype
+ 		if [ "$mimetype" ]
+ 		then
+-		    echo "MimeType=$mimetype;Application"
++		    echo "MimeType=$mimetype"
+ 		fi
+ 	    } >$tmp_entry
+ 
 diff -Nuard babychess-14.1.orig/src/gui_about.cc babychess-14.1/src/gui_about.cc
 --- babychess-14.1.orig/src/gui_about.cc	2003-03-16 14:10:58.000000000 +0100
 +++ babychess-14.1/src/gui_about.cc	2003-10-09 23:46:29.000000000 +0200
