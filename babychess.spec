@@ -1,5 +1,5 @@
 Summary:	BabyChess - a chess program
-Summary(pl):	BabyChess - program do gry w szachy
+Summary(pl.UTF-8):   BabyChess - program do gry w szachy
 Name:		babychess
 Version:	14.1
 Release:	4
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BabyChess is a chess program. You can edit chess games, play chess on
 the internet, and play locally against engines.
 
-%description -l pl
-BabyChess jest programem do gry w szachy. Moøliwa jest edycja stanu
+%description -l pl.UTF-8
+BabyChess jest programem do gry w szachy. Mo≈ºliwa jest edycja stanu
 gry, gra poprzez internet, oraz gra z komputerem.
 
 %prep
