@@ -1,5 +1,5 @@
 Summary:	BabyChess - a chess program
-Summary(pl.UTF-8):   BabyChess - program do gry w szachy
+Summary(pl.UTF-8):	BabyChess - program do gry w szachy
 Name:		babychess
 Version:	14.1
 Release:	4
